@@ -1,0 +1,137 @@
+body {
+    background: linear-gradient(135deg, #0d0d0d, #141436);
+    color: #e0e0ff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(20, 20, 50, 0.9);
+    box-shadow: 0 0 20px #4b56ff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    color: #8ea6ff;
+    font-size: 2.2em;
+    margin: 0;
+    text-shadow: 0 0 10px #4b56ff;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.search-bar {
+    padding: 8px 14px;
+    border: 2px solid #4b56ff;
+    border-radius: 25px;
+    background: #111;
+    color: #fff;
+    outline: none;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
+.post-card {
+    width: 80%;
+    background: rgba(25, 25, 50, 0.8);
+    border: 1px solid #4b56ff;
+    border-radius: 16px;
+    box-shadow: 0 0 15px #4b56ff55;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px #4b56ff99;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.new-post { background: #4b56ff; box-shadow: 0 0 10px #4b56ff; }
+.read { background: #7d5cff; box-shadow: 0 0 10px #7d5cff; }
+.edit { background: #00d1ff; box-shadow: 0 0 10px #00d1ff; }
+.delete { background: #ff4747; box-shadow: 0 0 10px #ff4747; }
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px currentColor;
+}
+
+.form-container {
+    width: 60%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    background: #111;
+    border: 2px solid #4b56ff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(20, 20, 50, 0.8);
+    color: #8ea6ff;
+}
+/* === Fade-in and Glow Animations === */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 10px #4b56ff, 0 0 20px #4b56ff; }
+    50% { text-shadow: 0 0 20px #7d5cff, 0 0 30px #7d5cff; }
+    100% { text-shadow: 0 0 10px #4b56ff, 0 0 20px #4b56ff; }
+}
+
+/* Apply fade to post cards */
+.post-card {
+    animation: fadeInUp 0.6s ease both;
+}
+
+/* Apply glowing pulse to title */
+h1 {
+    animation: glowPulse 3s infinite ease-in-out;
+}
